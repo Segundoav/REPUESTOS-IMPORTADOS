@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Filtros</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .boton-whatsapp {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: #25D366; /* Color de WhatsApp */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            cursor: pointer;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+        }
+        .boton-whatsapp img {
+            width: 20px; /* Ajusta el tamaño del ícono */
+            margin-right: 8px; /* Espacio entre el ícono y el texto */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>FILTROS Y ACCESORIOS PARA VEHICULOS </h1>
+        <button class="boton-whatsapp" onclick="window.open('https://wa.me/1234567890', '_blank')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+            999374604
+        </button>
+        <nav class="menu-horizontal">
+            <button onclick="mostrarCategoria('filtros-aire')">Filtros de Aire</button>
+            <button onclick="mostrarCategoria('filtros-aceite')">Filtros de Aceite</button>
+            <button onclick="mostrarCategoria('filtros-cabina')">Filtros de Cabina</button>
+            <button onclick="mostrarCategoria('filtros-combustible')">Filtros de Combustible</button>
+            <button onclick="mostrarCategoria('accesorios-auto')">Accesorios de Auto</button>
+        </nav>
+    </header>
+
+    <div class="contenedor">
+        <!-- Línea roja -->
+        <div class="linea-roja"></div>
+
+        <!-- Columna Izquierda -->
+        <aside class="sidebar">
+            <h2>Categorías</h2>
+            <button onclick="mostrarCategoria('filtros-aire')">Filtros de Aire</button>
+            <button onclick="mostrarCategoria('filtros-aceite')">Filtros de Aceite</button>
+            <button onclick="mostrarCategoria('filtros-cabina')">Filtros de Cabina</button>
+            <button onclick="mostrarCategoria('filtros-combustible')">Filtros de Combustible</button>
+            <button onclick="mostrarCategoria('accesorios-auto')">Accesorios de Auto</button>
+        </aside>
+
+        <!-- Columna Derecha -->
+        <main class="contenido">
+            <!-- Sección Filtros de Aire -->
+            <section id="filtros-aire" class="categoria">
+                <h2>Filtros de Aire</h2>
+                <div class="producto" onclick="mostrarDetalle('17801-0Y040 / FILTRO DE AIRE TOYOTA YARIS VIOS 2N ETIOS 1.5L MITSUBISHI MIRAGE 3A 1.2L', 'S/15', 'imagenes/Filtro de aire 17801-0Y040.jpg')">
+                    <img src="imagenes/Filtro de aire 17801-0Y040.jpg" alt="Filtro de Aire A1">
+                    <div class="descripcion">
+                        <h3>17801-0Y040</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('17801-21050 / TOYOTA YARIS PROBOX 1.3 2005-2013, COROLLA 1.6 1.8 2009-2013', 'S/15', 'imagenes/Filtro de aire 17801-21050.jpg')">
+                    <img src="imagenes/Filtro de aire 17801-21050.jpg" alt="Filtro de Aire A2">
+                    <div class="descripcion">
+                        <h3>17801-21050</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('17801-31120 / FILTRO DE AIRE. TOYOTA: RAV4 2AZ-FE 2006-2013 SAKURA A3306 (17801-31120)', 'S/15', 'imagenes/Filtro de aire 17801-31120.jpg')">
+                    <img src="imagenes/Filtro de aire 17801-31120.jpg" alt="Filtro de Aire A3">
+                    <div class="descripcion">
+                        <h3>17801-31120</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('17801-21030 / TOYOTA YARIS 1.3L MOTOR 2SF-FE 2002-2006,1.3L2NZ-FE 1999-2002,1.5L 1NZ-FE 2001-2006, PROBOX 1.3L MOTOR 1NZ-FE, 2NZ 2002-UP, VITZ 1.3L MOTOR 1NZ, 2NZ 1999-2005, FPG-1074 SIN TIERRA (AUTO), FILPOWER FPA-15363', 'S/15', 'imagenes/Filtro de aire 17801-21030.jpg')">
+                    <img src="imagenes/Filtro de aire 17801-21030.jpg" alt="Filtro de Aire A4">
+                    <div class="descripcion">
+                        <h3>17801-21030</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Filtros de Aceite -->
+            <section id="filtros-aceite" class="categoria">
+                <h2>Filtros de Aceite</h2>
+                <div class="producto" onclick="mostrarDetalle('90915-YZZJ1/E1 / TOYOTA COROLLA, RAV4 I SUV, YARIS, AURIS, VERSO, PRIUS, LITEACE, AVENSIS, CAMRY, CELICA, TERCEL,', '$15', 'IMAGENES/Filtro de aceite 90915-YZZJ-E1.jpg')">
+                    <img src="IMAGENES/Filtro de aceite 90915-YZZJ-E1.jpg" alt="Filtro de Aceite B1">
+                    <div class="descripcion">
+                        <h3>90915-YZZJ1/E1</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('TOYOTA Alphard I , Alphard II, Avensis I (T22), Avensis II (T25), Avensis, Verso, Camry, Celica, Corolla IX (E12/E13), Corolla VI (E90), Highlander I, Kluger, MR 2Previa, RAV 4 II, RAV 4 III', 'S/15', 'imagenes/Filtro de aceite 90915-YZZJ2.jpg')">
+                    <img src="imagenes/Filtro de aceite 90915-YZZJ2.jpg" alt="Filtro de Aceite B2">
+                    <div class="descripcion">
+                        <h3>90915-YZZJ2</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('Filtro de Aceite B3', '$20', 'imagenes/Filtro de aceite 90915-YZZJ-E1.jpg')">
+                    <img src="imagenes/Filtro de aceite 90915-YZZJ-E1.jpg" alt="Filtro de Aceite B3">
+                    <div class="descripcion">
+                        <h3>90915-YZZJ1/E1</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('Filtro de Aceite B4', '$22', 'imagenes/Filtro de aceite 90915-YZZJ2.jpg')">
+                    <img src="imagenes/Filtro de aceite 90915-YZZJ2.jpg" alt="Filtro de Aceite B4">
+                    <div class="descripcion">
+                        <h3>90915-YZZJ2</h3>
+                        <p>S/15</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Filtros de Cabina -->
+            <section id="filtros-cabina" class="categoria">
+                <h2>Filtros de Cabina</h2>
+                <div class="producto" onclick="mostrarDetalle('87139-0K070 / TOYOTA HILUX DIESEL 2.4L AÑO 2017-2021, FORTUNER SW4 2.8L AÑO 2017-2021, RAV4 2.0L AÑO 2020-2021. MAZDA, CX9 2.5L AÑO 2018-2022. SUBARU: EVOLTIS 2.4L AÑO 2022, FORESTER V 2.0L AÑO 2019-2022, XV II 2.0L AÑO 2018-2022', 'S/19', 'imagenes/Filtro de cabina 87139-0K070.jpg')">
+                    <img src="imagenes/Filtro de cabina 87139-0K070.jpg" alt="Filtro de Cabina C1">
+                    <div class="descripcion">
+                        <h3>87139-0K070</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('87139-52020 / TOYOTA: YARIS 1.3L MOTOR 2NZ-FE AÑO 2007-2016, 1.3L MOTOR 1NR-FE AÑO 2011-2014, 1.5L MOTOR 1NZ-FE AÑO 2006-2016; HI-LUX 2.5L MOTOR 2KD-FTV AÑO 2005-2015, 2.7L MOTOR 2TR-FE AÑO 2009-2014, 3.0L MOTOR 1KD-FTV AÑO 2005-2015; COROLLA 1.8L MOTOR', 'S/19', 'imagenes/Filtro de cabina 87139-52020.jpg')">
+                    <img src="imagenes/Filtro de cabina 87139-52020.jpg" alt="Filtro de Cabina C2">
+                    <div class="descripcion">
+                        <h3>87139-52020</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('87139-58010 / TOYOTA HI-LUX 2.4 TD 150CV 2015-2016 ,TOYOTA HI-LUX 2.8 TD 177CV 2015-2016. MAZDA CX-9 2017-2018 TOYOTA HILUX 2015-2018 TOYOTA HI-LUX D-4D ( 2005-2009) AVALON (2005- CRUISER,HIGHLANDER (2008-2012) SUBARU', '$16', 'imagenes/Filtro de cabina 87139-58010.jpg')">
+                    <img src="imagenes/Filtro de cabina 87139-58010.jpg" alt="Filtro de Cabina C3">
+                    <div class="descripcion">
+                        <h3>87139-58010</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('87139-0K070 / TOYOTA HILUX DIESEL 2.4L AÑO 2017-2021, FORTUNER SW4 2.8L AÑO 2017-2021, RAV4 2.0L AÑO 2020-2021. MAZDA, CX9 2.5L AÑO 2018-2022. SUBARU: EVOLTIS 2.4L AÑO 2022, FORESTER V 2.0L AÑO 2019-2022, XV II 2.0L AÑO 2018-2022', 'S/19', 'imagenes/Filtro de cabina 87139-0K070.jpg')">
+                    <img src="IMAGENES/Filtro de cabina 87139-0K070.jpg" alt="Filtro de Cabina C4">
+                    <div class="descripcion">
+                        <h3>Filtro de Cabina C4</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Filtros de Combustible -->
+            <section id="filtros-combustible" class="categoria">
+                <h2>Filtros de Combustible</h2>
+                <div class="producto" onclick="mostrarDetalle('23390-0L070 / FILTRO DE COMBUSTIBLE TOYOTA: HILUX MOTOR 1GD 2015-UP TOYOTA SAKURA F-11140 (23390-0L070)', 'S/19', 'imagenes/Fuel filtro 23390-0L070.png')">
+                    <img src="imagenes/Fuel filtro 23390-0L070.png" alt="Filtro de Combustible D1">
+                    <div class="descripcion">
+                        <h3>23390-0L070</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('23390-0L041 / FILTRO DE COMBUSTIBLE TOYOTA HI-ACE (2KD-FTV) LEXUS TOYOTA: HI LUX D4-D 4 CIL 2.5L MOTOR 2KD-FTV AÑO 2005-2015, 3.0L MOTOR 1KD-FTV AÑO 2005-2015; HIACE D-4D 4 CIL 2.5L MOTOR 2KD-FTV AÑO 2005-2016, 4 CIL 3.0L MOTOR 1KD AÑO 2016, 4 CIL 3.0L MOTOR 5L AÑO 2009-2014', 'S/19', 'imagenes/Fuel filtro 23390-0L041.png')">
+                    <img src="imagenes/Fuel filtro 23390-0L041.png" alt="Filtro de Combustible D2">
+                    <div class="descripcion">
+                        <h3>23390-0L041</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('23390-0L070 / FILTRO DE COMBUSTIBLE TOYOTA: HILUX MOTOR 1GD 2015-UP TOYOTA SAKURA F-11140 (23390-0L070)', 'S/19', 'imagenes/Fuel filtro 23390-0L070.png')">
+                    <img src="imagenes/Fuel filtro 23390-0L070.png" alt="Filtro de Combustible D3">
+                    <div class="descripcion">
+                        <h3>Filtro de Combustible D3</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('23390-0L041 / FILTRO DE COMBUSTIBLE TOYOTA HI-ACE (2KD-FTV) LEXUS TOYOTA: HI LUX D4-D 4 CIL 2.5L MOTOR 2KD-FTV AÑO 2005-2015, 3.0L MOTOR 1KD-FTV AÑO 2005-2015; HIACE D-4D 4 CIL 2.5L MOTOR 2KD-FTV AÑO 2005-2016, 4 CIL 3.0L MOTOR 1KD AÑO 2016, 4 CIL 3.0L MOTOR 5L AÑO 2009-2014', 'S/19', 'imagenes/Fuel filtro 23390-0L041.png')">
+                    <img src="imagenes/Fuel filtro 23390-0L041.png" alt="Filtro de Combustible D4">
+                    <div class="descripcion">
+                        <h3>Filtro de Combustible D4</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sección Accesorios de Auto -->
+            <section id="accesorios-auto" class="categoria">
+                <h2>Accesorios de Auto</h2>
+                <div class="producto" onclick="mostrarDetalle('Accesorio E1: Alfombra de Auto', '$10', 'imagenes/timones.png')">
+                    <img src="imagenes/timones.png" alt="Accesorio E1: Alfombra de Auto">
+                    <div class="descripcion">
+                        <h3>Cubierta de timon</h3>
+                        <p>S/59</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('Limpiador de espuma multiusos, Su fórmula concentrada suave y efectiva puede sacar las manchas sin ningún esfuerzo, además es muy fácil de usar', 'S/19', 'imagenes/limpiador multiuso.jpg')">
+                    <img src="imagenes/limpiador multiuso.jpg" alt="Accesorio E2: Kit de Limpieza">
+                    <div class="descripcion">
+                        <h3>Limpiador multiuso</h3>
+                        <p>S/19</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('Llave de trinquete de gato para autos', '$12', 'imagenes/llaves trinquete.jpg')">
+                    <img src="imagenes/llaves trinquete.jpg" alt="Accesorio E3: Parasol Reflectante">
+                    <div class="descripcion">
+                        <h3>Lllave trinquete para gato</h3>
+                        <p>S/59</p>
+                    </div>
+                </div>
+                <div class="producto" onclick="mostrarDetalle('Accesorio E4: Soporte para Móvil', '$15', 'imagenes/llave trinquete.jpg')">
+                    <img src="imagenes/llave trinquete.jpg" alt="Accesorio E4: Soporte para Móvil">
+                    <div class="descripcion">
+                        <h3>Llave trinquete para gato</h3>
+                        <p>S/59</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Filtros</p>
+    </footer>
+
+    <!-- Modal para mostrar detalles del producto -->
+    <div id="detalleProducto" class="detalle-producto">
+        <div class="imagen-detalle">
+            <img id="imagenDetalle" src="" alt="Imagen del producto">
+        </div>
+        <div class="descripcion-detalle">
+            <h2 id="nombreProducto"></h2>
+            <p id="precioProducto"></p>
+            <button onclick="cerrarDetalle()">Cerrar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

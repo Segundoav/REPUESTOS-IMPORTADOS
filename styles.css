@@ -1,45 +1,60 @@
-<<<<<<< HEAD
 /* Estilos globales */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #6a93cd;
     color: rgb(5, 0, 0);
-    padding: 10px;
+    padding: 5px 0;
     text-align: center;
     position: fixed;
     width: 100%;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    
+    font-size: 15px;/*ancho de la barra superior*/
+    z-index: 999;
 }
+
+/* Menú horizontal */
 .menu-horizontal {
     display: flex;
-    justify-content: space-between;
-    gap: 100px;
+    justify-content: center;
+    gap: 30px;
     font-size: 24px;
     margin-left: 220px;
     margin-right: 220px;
-
+    margin-top: -20px;
 }
-
+/* Botones horizonatales */
 .menu-horizontal button {
     border-radius: 5px;
-    font-size: 15px;
-    padding: 1px;
+    font-size: 17px;
+    padding: 5px 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 10px;
+    white-space: nowrap;
+    background-color: #ced6ce;/*color de los botones superiores*/
+    border: 2px solid #ced6ce; /* color del borde de los botones superiores */
     
-
+}
+.menu-horizontal button:hover {
+    background-color: #45a049; /* Nuevo color de fondo al pasar el cursor */
+    border: 2px solid #45a049; /* Cambia el color del borde al pasar el cursor */
+    color: white; /* Cambiar el color del texto si es necesario */
 }
 
-/* Estilos del botón de WhatsApp */
+.menu-horizontal button:hover {
+    transform: scale(1.05);
+}
+
+/* Botón de WhatsApp */
 .boton-whatsapp {
     position: absolute;
     top: 50px;
-    right: 15Px;
-    background-color: #25D366; /* Color de WhatsApp */
+    right: 15px;
+    background-color: #25D366;
     color: white;
     border: none;
     border-radius: 5px;
@@ -48,80 +63,88 @@ header {
     font-size: 20px;
     display: flex;
     align-items: center;
-    margin-right: 20px;
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Añadido */
+    transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .boton-whatsapp:hover {
-    background-color: #1da851; /* Color más oscuro al pasar el cursor */
-    transform: scale(1.05); /* Efecto de aumento */
+    background-color: #1da851;
+    transform: scale(1.05);
 }
 
 .boton-whatsapp img {
-    width: 40px; /* Ajusta el tamaño del ícono */
-    margin-right: 10px; /* Espacio entre el ícono y el texto */
-}
-
-/* Efectos de transición para todos los botones */
-button {
-    transition: transform 0.3s ease, background-color 0.3s ease; /* Añadido */
-}
-
-button:hover {
-    transform: scale(1.05); /* Efecto de aumento */
+    width: 40px;
+    margin-right: 10px;
 }
 
 /* Contenedor */
 .contenedor {
     display: flex;
     flex-direction: row;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
 }
 
-/* Estilos de la barra lateral */
+/* Barra lateral */
 .sidebar {
     position: fixed;
-    top: 170px;
+    top: 140px;
     left: 0;
     height: calc(100% - 150px);
-    width: 20%; /* Ajuste para pantallas pequeñas */
-    background-color: #f4f4f4;
+    width: 19%;
+    background-color: #f4f4f4; /*color del padding de los botones laterales*/
     padding: 20px 10px;
-    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 0px 5px rgba(8, 29, 221, 0.2);/*sombra del padding del cuadro de los botones laterales*/
     overflow-y: auto;
-    z-index: 999;
+    z-index: 998;
+    padding-left: 20px;
+    padding-right:0px;
+    margin-left: 0px;
+    padding-top: 20px;
+    padding-bottom: 2px;
+    max-height: 330px;
+    max-width: 300px;
+    
 }
 
 .sidebar h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    margin-left: 50px;
+    margin-top: 0px;
 }
 
 .sidebar button {
     display: block;
-    width: 100%;
-    margin: 5px 0;
-    padding: 10px;
+    width: 80%;
+    margin: 5px 10px;
+    padding: 10px 10px;
     border: none;
-    background-color: #6a93cd;
-    color: white;
+    background-color: #6a93cd;/* color de los botones laterales*/
+    color: white;/*color de las letras de los botones laterales*/
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5PX;
+    border-radius: 5px;
+    padding-left: 30px;
+    padding-right: 50px;
     
+
 }
 
 .sidebar button:hover {
-    background-color: #45a049;
+    background-color: #45a049;/*cambia color al poner el cursor en botones laterales*/
 }
 
-/* Estilos del contenido principal */
+/* Contenido principal */
 .contenido {
-    margin-left: 20%; /* Espacio para la barra lateral fija */
+    margin-left: 20%;
     padding: 20px;
     overflow-y: auto;
-    margin-top: 150px;
+    margin-top: 120px;
+    padding-top: 0%;
 }
 
-/* Estilos para las secciones de productos */
+/* Secciones de productos */
 .categoria {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -139,28 +162,27 @@ button:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ddd;
+    border: 1px solid #ddd;/*color de borde paddings de los productos*/
     padding: 10px;
     border-radius: 5px;
-    background-color: #ced6ce;
+    background-color: #ced6ce;/*color de paddings de los productos*/
     text-align: center;
     margin-top: 10px;
     cursor: pointer;
-    font-size: 20PX;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
 }
 
 .producto img {
-    width: 100%; /* Imágenes se adaptan a su contenedor */
-    max-width: 200px; /* Límite máximo */
-    height: auto; /* Mantener proporciones */
+    width: 100%;
+    max-width: 200px;
+    height: auto;
     margin-bottom: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadimos transición */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .producto img:hover {
-    transform: scale(1.1); /* Efecto de zoom */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+    transform: scale(1.1);
+    box-shadow: 0 4px 10px rgba(32, 10, 227, 0.3);/*sombra imagen de proucto al ampliar*/
 }
 
 /* Detalle del Producto */
@@ -169,24 +191,23 @@ button:hover {
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap; /* Permite que los elementos se ajusten en pantallas pequeñas */
-    justify-content: space-between;
+    display: none;
+    flex-direction: row;
     align-items: center;
     background-color: white;
     border: 2px solid #ddd;
     padding: 20px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     width: 80%;
-    height: auto; /* Adaptable a contenido */
     max-height: 80%;
-    z-index: 1000;
-    display: none;
-    overflow-y: auto; /* Permite desplazarse si es necesario */
+    z-index: 1000;/* Oculto por defecto */
+    overflow-y: auto;
+    
 }
 
+
 .imagen-detalle img {
-    width: 120%;
+    width: 80%;
     max-width: 600px;
     height: auto;
 }
@@ -256,10 +277,10 @@ button:hover {
         grid-template-columns: repeat(2, 1fr);
     }
     .sidebar {
-        width: 25%; /* Más ancho en pantallas medianas */
+        width: 25%;
     }
     .contenido {
-        margin-left: 25%; /* Ajusta el margen */
+        margin-left: 25%;
     }
 }
 
@@ -269,83 +290,47 @@ button:hover {
         grid-template-columns: 1fr;
     }
     .sidebar {
-        position: relative; /* Ahora fluye con el contenido */
+        position: relative;
         width: 100%;
         top: 0;
     }
     .contenido {
-        margin-left: 0; /* Sin margen lateral */
-        margin-top: 20px; /* Espacio extra debajo del header */
+        margin-left: 0;
+        margin-top: 20px;
     }
     .contact-button {
         padding: 8px 15px;
         top: auto;
-        bottom: 20px; /* Se mueve al fondo */
+        bottom: 20px;
     }
-=======
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
 }
 
-header {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 20px;
-    text-align: center;
+/* Estilos para la barra horizontal */
+/* Estilos para la barra horizontal */
+.barra-horizontal {
+    width: 100%; /* Ancho completo de la pantalla */
+    background-color: #6a93cd; /* Color de fondo de la barra (puedes cambiarlo) */
+    color: white; /* Color del texto */
+    height: 50px; /* Altura de la barra */
+    position: relative; /* Cambiado de fixed a relative */
+    bottom: 0; /* Elimina esta propiedad, ya no es necesaria */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto */
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
+p {
+    font-size: 25px; /* Ajusta el tamaño de la fuente según lo que necesites */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+h3 {
+    font-size: 25px; /* Ajusta el tamaño de la fuente según lo que necesites */
+
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 15px;
+h2 {
+    font-size: 30px;
 }
-
-nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-.productos {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.producto {
-    background: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
-    margin: 10px;
-    width: 30%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.producto img {
-    max-width: 100%;
-    height: auto;
-}
-
-footer {
-    background: #35424a;
-    color: #ffffff;
-    padding: 10px 0;
-    text-align: center;
->>>>>>> 9dd05769ba126098f2b31b54e52d836b7c54295e
+h4 {
+    font-size: 20px;
+    padding-left: 70px;
 }

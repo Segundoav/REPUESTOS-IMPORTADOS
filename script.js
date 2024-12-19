@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function mostrarCategoria(idCategoria) {
     // Obtener el elemento de la categoría seleccionada
     let categoriaSeleccionada = document.getElementById(idCategoria);
@@ -27,3 +28,8 @@ function cerrarDetalle() {
 
 
 
+=======
+function agregarAlCarrito(nombre, precio) {
+    alert(`Has agregado ${nombre} al carrito por $${precio}.`);
+}
+>>>>>>> 9dd05769ba126098f2b31b54e52d836b7c54295e
